@@ -1,0 +1,107 @@
+article.hiring,
+article.customers {
+  padding: 120px 0;
+}
+
+.cust {
+	list-style-type: none;
+	display: inline-block;
+  margin-right: 50px;
+}
+.customers {
+  color: #ffffff;
+  background-color: #f7f7f9;
+  text-align: center;
+}
+.customers h1 {
+  padding: 0 0 60px 0;
+  font-size: 60px;
+  color: #151515;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.customers h1 span {
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #868686;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+.customers ul.customer-logos {
+  opacity: .7;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.customers ul.customer-logos:before,
+.customers ul.customer-logos:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.customers ul.customer-logos:after {
+  clear: both;
+}
+.customers ul.customer-logos li {
+  float: left;
+  width: 16.66667%;
+  height: 80px;
+  overflow: hidden;
+}
+.customers ul.customer-logos li.cust {
+  background: url(/images/customer-sprite-f854bc6d.png) 0 0 no-repeat;
+  background-image: url("/images/customer-sprite-f854bc6d.png");
+  background-size: 1130px 128px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .customers ul.customer-logos li.cust {
+    background-image: url("/images/customer-sprite@2x-e7f817e6.png");
+    background-size: 1130px 128px;
+  }
+}
+.customers ul.customer-logos li.c1 {
+  background-position: 36px 0;
+}
+.customers ul.customer-logos li.c2 {
+  background-position: -167px 0;
+}
+.customers ul.customer-logos li.c3 {
+  background-position: -362px 0;
+}
+.customers ul.customer-logos li.c4 {
+  background-position: -563px 0;
+}
+.customers ul.customer-logos li.c5 {
+  background-position: -765px 0;
+}
+.customers ul.customer-logos li.c6 {
+  background-position: -962px 0;
+}
+.customers ul.customer-logos li.c7 {
+  background-position: 36px -88px;
+}
+.customers ul.customer-logos li.c8 {
+  background-position: -164px -88px;
+}
+.customers ul.customer-logos li.c9 {
+  background-position: -364px -88px;
+}
+.customers ul.customer-logos li.c10 {
+  background-position: -570px -88px;
+}
+.customers ul.customer-logos li.c11 {
+  background-position: -772px -88px;
+}
+.customers ul.customer-logos li.c12 {
+  background-position: -956px -88px;
+}
+.cust-logos {
+	width: 250px;
+}
