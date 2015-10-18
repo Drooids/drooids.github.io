@@ -85,8 +85,12 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+.index {
+    display: none;
+}
+
 .brand-white-logo {
-    background: url(../images/logo-v3-black-icon.png) 0 0 no-repeat;
+    background: url(../images/logo-drooids-v3-black-icon.png) 0 0 no-repeat;
     color: #151515;
     background-size: 50px 75px;
     height: 70px;
@@ -1071,7 +1075,7 @@ footer .footer-below {
 }
 
 /*
-    - owl custom theme - 
+    - owl custom theme -
 */
 
 .owl-theme .owl-controls{
@@ -1190,17 +1194,17 @@ footer .footer-below {
     /* margin:0px 50px; */
 }
 
- 
+
 .owl-controls .owl-nav div {
   position: absolute;
 }
- 
+
 .owl-theme .owl-controls .owl-prev{
   left: 15px;
-  top: 295px; 
+  top: 295px;
   background-color: transparent !important;
 }
- 
+
 .owl-theme .owl-controls .owl-next{
   right: 15px;
   top: 295px;
