@@ -1228,3 +1228,14 @@ footer .footer-below {
 .about .profile-overview th {
     padding: 8px 8px 8px 0px;
 }
+
+footer .image_off {
+    display: none;
+}
+footer .up:hover .image_on{
+    display: none;
+}
+footer .up:hover .image_off{
+    display: inline;
+}
+
