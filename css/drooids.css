@@ -227,6 +227,14 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+    #owl-demo .owl-item > div{
+      padding-top: 20px;
+      padding-bottom: 0px;
+      margin: 0px !important;
+      font-size: 32px;
+      border: 1px white;
+      color: #fff;
+    }
 }
 
 #portfolio .portfolio-item {
@@ -1237,3 +1245,4 @@ footer .up:hover .image_off {
 .about .profile-overview th {
     padding: 8px 8px 8px 0px;
 }
+
