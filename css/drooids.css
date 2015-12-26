@@ -205,6 +205,10 @@ header .intro-text .skills {
     border: 0;
 }
 
+.navbar-inverse .navbar-toggle {
+  background-color: #128f76;
+}
+
 section {
     padding: 50px 0;
 }
@@ -1238,11 +1242,14 @@ footer .up:hover .image_off {
   /* -webkit-transform: rotate(1deg); */
   /* transform: rotate(1deg); */
   margin-bottom: 10px;
+  width: 212px;
+  height: 212px;
 }
 .about .profile-overview h3 {
     margin-top: 0px;
 }
 .about .profile-overview th {
     padding: 8px 8px 8px 0px;
+    width: 75.0751px;
 }
 
