@@ -334,8 +334,8 @@
                         <p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <a href="https://github.com/Drooids/main-www" target="_blank" class="btn btn-lg btn-outline">
-                            <i class="fa fa-eye"></i> &nbsp; Git this site out
+                        <a href="about.html" class="btn btn-lg btn-outline">
+                          &nbsp; Read more...
                         </a>
                     </div>
                 </div>
@@ -439,6 +439,9 @@
                     </div>
                 </div>
             </div>
+
+            <div style="width: 100%; height: 200px;" id="map"></div>
+
             <div class="footer-below">
                 <div class="container">
                     <div class="row">
@@ -507,27 +510,14 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/map.js"></script>
+
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <script src="js/drooids.js"></script>
+    <script src="js/main.js"></script>
 
-    <script type="text/javascript">
-    window.onload = function(e) {
-        setTimeout(function() {
-            document.getElementById('index').style.display = "block";
-            document.getElementById('loader').style.display = "none";
-        }, 2000);
-    }
-    var clicky_site_ids = clicky_site_ids || [];
-    clicky_site_ids.push(100886501);
-    (function() {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = '//static.getclicky.com/js';
-      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-    })();
-    </script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100886501ns.gif" /></p></noscript>
 
 </body>

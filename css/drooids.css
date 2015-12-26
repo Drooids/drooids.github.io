@@ -34,6 +34,10 @@ h6 {
     font-weight: 700;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -377,6 +381,19 @@ footer .footer-below {
     padding: 25px 0;
     background-color: #233140;
 }
+
+footer .image_off {
+    display: none;
+}
+
+footer .up:hover .image_on {
+    display: none;
+}
+
+footer .up:hover .image_off {
+    display: inline;
+}
+
 
 .btn-social {
     display: inline-block;
@@ -1158,6 +1175,7 @@ footer .footer-below {
 }
 
 /* preloading images */
+
 .owl-item.loading{
     min-height: 150px;
     background: url(AjaxLoader.gif) no-repeat center center
@@ -1180,7 +1198,6 @@ footer .footer-below {
     border-radius: 3px;
     margin-bottom:4px;
 }
-
 #owl-demo .owl-item > div{
   padding-top: 20px;
   padding-bottom: 0px;
@@ -1189,29 +1206,21 @@ footer .footer-below {
   border: 1px white;
   color: #fff;
 }
-
-.wrapper-with-margin{
-    /* margin:0px 50px; */
-}
-
-
 .owl-controls .owl-nav div {
   position: absolute;
 }
-
 .owl-theme .owl-controls .owl-prev{
   left: 15px;
   top: 295px;
   background-color: transparent !important;
 }
-
 .owl-theme .owl-controls .owl-next{
   right: 15px;
   top: 295px;
   background-color: transparent !important;
 }
 
-
+/* About */
 .about .profile-picture {
   vertical-align: middle;
   padding: 5px;
@@ -1228,14 +1237,3 @@ footer .footer-below {
 .about .profile-overview th {
     padding: 8px 8px 8px 0px;
 }
-
-footer .image_off {
-    display: none;
-}
-footer .up:hover .image_on{
-    display: none;
-}
-footer .up:hover .image_off{
-    display: inline;
-}
-
