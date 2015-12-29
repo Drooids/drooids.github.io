@@ -155,7 +155,7 @@
             <div class="wrapper-with-margin sub dark-blue" style="padding:0;">
                 <div id="owl-demo" class="owl-carousel owl-theme">
 
-                    <div class="item-carousel">
+                    <div class="item-carousel" data-toggle="modal" data-target="#modal-yacthing">
                         <div class="container row transparent">
                             <div class="col-lg-12 row">
                                 <div class="col-lg-3 case-study">
@@ -236,27 +236,6 @@
                             </div>
                           </div>
                         <img src="images/clients/client-4.png" alt="">
-                            <!-- a href="/blog/tao-of-hashicorp.html" class="cont-read">More about us<span class="light-caret-right small"></span></a -->
-                    </div>
-
-                    <div class="item-carousel">
-                        <div class="container row transparent">
-                            <div class="col-lg-12 row">
-                                <div class="col-lg-3 case-study">
-                                  <h1 style="font-size:26px;">
-                                    <span class="case-study">Case Study</span>
-                                    Frimann
-                                  </h1>
-                                  </div>
-                                  <div class="col-lg-7">
-                                      <p style="font-size:16px;">
-                                        The <strong>Most</strong> used Renting system in Iceland.
-                                        <!-- br><a href="/portfolio/score-revolution">View case study →</a -->
-                                      </p>
-                                  </div>
-                            </div>
-                          </div>
-                        <img src="images/clients/client-5.png" alt="">
                             <!-- a href="/blog/tao-of-hashicorp.html" class="cont-read">More about us<span class="light-caret-right small"></span></a -->
                     </div>
 
@@ -482,8 +461,8 @@
         <!-- Portfolio Modals
              Example: detailed projects...
         -->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
+        <div class="portfolio-modal modal" data-modal-source="yachting" id="modal-yacthing" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content" style="z-index: 10000;">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -494,10 +473,21 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <h2>Project Title</h2>
+                                <h2>Yachting's Best</h2>
                                 <hr class="star-primary">
-                                <img src="images/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                                <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                                <p>
+                                  Web Development google-maps-api, sass, html5, angularjs, ruby, javascript <br><br>
+                                  The place to come when planning your next boating adventure. Its information base will not only facilitate trip preparations and planning, it will also stimulate ongoing destination discovery for the enjoyment of all aboard. <br><br>
+                                  Its user-friendly map-based approach can be accessed on any device that is connected to the Internet, and whether using a desktop, laptop, tablet or smartphone, it gives a versatile, one-stop information site not seen before in the boating community.  It's built on top of technologies that <a href="http://google.com">http://google.com</a> uses. <br><br>
+                                  <a href="http://app.yachtingsbest.com">http://app.yachtingsbest.com</a>
+                                </p>
+                                <img src="images/portfolio/yachting/yacht-1.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-2.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-3.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-4.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-5.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-6.png" class="img-responsive img-centered" alt="">
+                                <img src="images/portfolio/yachting/yacht-7.png" class="img-responsive img-centered" alt="">
                                 <ul class="list-inline item-details">
                                     <li>Client:
                                         <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -537,7 +527,6 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <script src="js/drooids.js"></script>
-    <script src="js/main.js"></script>
 
     <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100886501ns.gif" /></p></noscript>
 
