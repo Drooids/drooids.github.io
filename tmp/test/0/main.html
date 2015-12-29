@@ -1,0 +1,73 @@
+<html>
+<head>
+<link href="style.css?v=1450977859" media="screen" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="main.js?v=1450977874"></script>
+<style type="text/css">
+  section.section--black .shell {
+    background-color: #fff !important;
+  }
+</style>
+</head>
+
+<body>
+<section class="section--black ">
+<div class="shell  " style=" ">
+<div class="grid centered ">
+<div class="grid__item one-whole">
+<div class="text--constrained">
+</div>
+</div><div class="grid__item two-thirds portable-one-whole handheld-one-whole">
+
+</div><div class="grid__item one-half portable-two-thirds handheld-one-whole left">
+<form id="tithe-calc" onsubmit="return toSubmit();" class="hard" action="#" data-parsley-validate>
+
+<p style="border: 1px solid;">
+<label for="gross">Enter Amount</label>
+<input id="gross" type="text" placeholder="E.x.: 100" class="text" />
+</p>
+<button id="submit" type="submit" class="ready submit">Calculate Tithe</button>
+</form>
+
+<form id="tithe-give" class="hard visuallyhidden" onsubmit="return false;" >
+<p style="border: 1px solid;">
+<label for="tithe">Tithe Amount</label>
+<input id="tithe" type="text" onfocus="return onReset();" class="text" />
+</p>
+<button id="tithe-output" class="ready submit" type="submit">Output: </button>
+</form>
+
+<script>
+function toSubmit(){
+var gross = $('#gross').val().replace(/,/g, '');
+var tithe = ((gross*.1)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, "");
+var isGood = !isNaN(parseInt(tithe)) && isFinite(tithe);
+if(isGood == false || tithe < 0) {onReset();}
+else {
+$('#tithe-calc').addClass('visuallyhidden');
+$('#tithe-give').removeClass('visuallyhidden');
+$('#tithe').val(tithe);
+$('#tithe-output').text('Give $' + tithe + ' output');
+}
+return false;
+}
+function onReset() {
+$('#gross').val('');
+$('#tithe-calc').removeClass('visuallyhidden');
+$('#tithe-give').addClass('visuallyhidden');
+$('#gross').focus();
+return false;
+}
+function createTitheURL() {
+var titheURL = "https://give.newspring.cc/?give=" + $('#tithe').val();
+window.location.href = titheURL;
+return false;
+}
+</script>
+
+</div>
+</div>
+</div>
+</section>
+</body>
+</html
