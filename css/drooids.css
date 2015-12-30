@@ -1231,6 +1231,13 @@ footer .up:hover .image_off {
   top: 295px;
   background-color: transparent !important;
 }
+.owl-theme .link {
+  color: #18bc9c;
+  cursor: pointer;
+}
+.owl-theme .link:hover {
+    text-decoration: underline;
+}
 
 /* About */
 .about .profile-picture {
