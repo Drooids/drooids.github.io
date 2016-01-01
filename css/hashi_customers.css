@@ -6,7 +6,7 @@ article.customers {
 .cust {
 	list-style-type: none;
 	display: inline-block;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 .customers {
   color: #ffffff;
