@@ -6,10 +6,12 @@ drooids.__globals__ = {
 }
 
 drooids.window = window;
-drooids.body = $("body");
+drooids.body = $('body');
 drooids.navbar = $('.navbar-collapse ul li a');
 drooids.pageScroll = $('.page-scroll');
 drooids.pageScroll.a = $('.page-scroll a');
+drooids.logo = {};
+drooids.logo.jumbo = $('.logo-jumbo');
 
 // Onload
 drooids.onload = function(func) {
@@ -64,6 +66,21 @@ drooids.onload(function(e) {
     document.getElementById('loader').style.display = "none";
 
     var scrollParam = drooids.helpers.getParameterByName('scrollTo');
+
+    drooids.logo.jumbo.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+
+      // Scroll by param
+      if(scrollParam.length) {
+        var element;
+        if(scrollParam.indexOf('id_') > -1) {
+          element = '#' + scrollParam.slice(3, scrollParam.length);
+        }
+        if(scrollParam.indexOf('class_') > -1) {
+          element = '.' + scrollParam.slice(6, scrollParam.length);
+        }
+        window.helpers._scrollTo(element);
+      }
+    });
 
     // Scroll spy
     drooids.body.scrollspy({
