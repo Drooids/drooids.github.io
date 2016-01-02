@@ -24,7 +24,7 @@ $(function() {
                 data: {
                     key: 'h7nP27VyRFNZ8MTSaqmW6g',
                     message: {
-                        text: message + "\n\n" + "Phone: " + phone,
+                        text: message + "\n\n" + "Email: " + email + "\n\n" + "Phone: " + phone,
                         subject: "Contact Engineers",
                         from_email: drooids.__globals__.senderEmail,
                         from_name: name,
