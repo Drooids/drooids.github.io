@@ -24,10 +24,10 @@ $(function() {
                 data: {
                     key: 'h7nP27VyRFNZ8MTSaqmW6g',
                     message: {
-                        text: "Example text content",
-                        subject: "example subject",
-                        from_email: "mail@example.com",
-                        from_name: "Example Name",
+                        text: message + "\n\n" + "Phone: " + phone,
+                        subject: "Contact Engineers",
+                        from_email: email,
+                        from_name: name,
                         to: [{
                             "email": "mail@example.com",
                             "name": "Recipient Name"
