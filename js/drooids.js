@@ -78,7 +78,7 @@ drooids.onload(function(e) {
         if(scrollParam.indexOf('class_') > -1) {
           element = '.' + scrollParam.slice(6, scrollParam.length);
         }
-        window.helpers._scrollTo(element);
+        drooids.helpers._scrollTo(element);
       }
     });
 
