@@ -26,7 +26,7 @@ $(function() {
                     message: {
                         text: message + "\n\n" + "Phone: " + phone,
                         subject: "Contact Engineers",
-                        from_email: email,
+                        from_email: drooids.__globals__.senderEmail,
                         from_name: name,
                         to: drooids.__globals__.contactEmails,
                     }
