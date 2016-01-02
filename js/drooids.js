@@ -3,7 +3,7 @@ var drooids = {};
 
 drooids.__globals__ = {
   brand: 'Drooids',
-  senderEmail: 'contactengineers@drooids.com'
+  senderEmail: 'contactengineers@drooids.com',
   contactEmails: [
     {email: "dk18184@gmail.com", name: "Dren"},
     {email: "dren@drooids.com", name: "Dren"},
