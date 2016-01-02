@@ -28,10 +28,7 @@ $(function() {
                         subject: "Contact Engineers",
                         from_email: email,
                         from_name: name,
-                        to: [{
-                            "email": "mail@example.com",
-                            "name": "Recipient Name"
-                        }]
+                        to: drooids.__globals__.contactEmails,
                     }
                 },
                 cache: false,
