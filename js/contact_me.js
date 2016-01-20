@@ -18,13 +18,21 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
-                type: "POST",
+                type: 'POST',
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                dataType: 'json',
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    key: 'h7nP27VyRFNZ8MTSaqmW6g',
+                    message: {
+                        text: message 
+                                + "\n" + "---" 
+                                + "\n\n" + "Email: " + email 
+                                + "\n" + "Phone: " + phone,
+                        subject: "Contact Engineers",
+                        from_email: drooids.__globals__.senderEmail,
+                        from_name: name,
+                        to: drooids.__globals__.contactEmails,
+                    }
                 },
                 cache: false,
                 success: function() {
@@ -62,7 +70,6 @@ $(function() {
         $(this).tab("show");
     });
 });
-
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {

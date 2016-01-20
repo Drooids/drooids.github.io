@@ -446,7 +446,7 @@ footer .up:hover .image_off {
 }
 
 .portfolio-modal .modal-content {
-    padding: 100px 0;
+    padding: 20px 0;
     min-height: 100%;
     border: 0;
     border-radius: 0;
@@ -463,6 +463,10 @@ footer .up:hover .image_off {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img.mobile {
+    width: 30%;
 }
 
 .portfolio-modal .modal-content .item-details {
@@ -1230,6 +1234,13 @@ footer .up:hover .image_off {
   right: 15px;
   top: 295px;
   background-color: transparent !important;
+}
+.owl-theme .link {
+  color: #18bc9c;
+  cursor: pointer;
+}
+.owl-theme .link:hover {
+    text-decoration: underline;
 }
 
 /* About */
