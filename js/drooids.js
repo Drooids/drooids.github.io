@@ -140,6 +140,9 @@
           itemsMobile: false
       });
 
+      // Load project images
+      $("img.unloaded").reveal("fadeIn", 1000);
+
       // Google maps
 
       // Basic options for a simple Google Map
