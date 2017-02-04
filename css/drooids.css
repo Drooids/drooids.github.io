@@ -1112,7 +1112,7 @@ footer .up:hover .image_off {
 */
 
 .owl-theme .owl-controls{
-    margin-top: 10px;
+    margin-top: 0px !important;
     text-align: center;
 }
 
