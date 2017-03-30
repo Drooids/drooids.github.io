@@ -151,7 +151,7 @@
         zoom: 6,
         mapTypeControl: false,
         scrollwheel: false,
-        center: new google.maps.LatLng(58.8234151, 5.7239151,201), // New York
+        center: new google.maps.LatLng(58.8234151, 5.7239151,201),
         styles: [{
             "featureType":"administrative","elementType":"labels.text.fill",
             "stylers": [{"color":"#444444"}]
@@ -183,11 +183,14 @@
       // We are using a div with id="map" seen below in the <body>
       var mapElement = document.getElementById('map');
       var map = new google.maps.Map(mapElement, mapOptions);
+      
+      /* 
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(58.8234151, 5.7239151,201),
         map: map,
         title: 'Snazzy!'
       });
+      */
 
     }, 800);
 
