@@ -1,0 +1,18 @@
+﻿{"frames": [
+{
+	"filename": "eco-house.png instance 1",
+	"frame": {"x":0,"y":30,"w":252,"h":246},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":246},
+	"sourceSize": {"w":252,"h":246}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "eco.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":512},
+	"scale": "1"
+}
+}

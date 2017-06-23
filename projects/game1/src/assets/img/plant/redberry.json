@@ -1,0 +1,19 @@
+﻿{"frames": [
+
+{
+	"filename": "raspberries-4.png instance 1",
+	"frame": {"x":0,"y":0,"w":96,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":71},
+	"sourceSize": {"w":96,"h":71}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "rdberry.png",
+	"format": "RGBA8888",
+	"size": {"w":104,"h":94},
+	"scale": "1"
+}
+}

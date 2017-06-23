@@ -1,0 +1,19 @@
+﻿{"frames": [
+
+{
+	"filename": "Bitmap 1 instance 1",
+	"frame": {"x":0,"y":0,"w":240,"h":158},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":158},
+	"sourceSize": {"w":240,"h":158}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "cow-brown-fence.png",
+	"format": "RGBA8888",
+	"size": {"w":266,"h":178},
+	"scale": "1"
+}
+}

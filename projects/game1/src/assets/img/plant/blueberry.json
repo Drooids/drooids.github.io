@@ -1,0 +1,19 @@
+﻿{"frames": [
+
+{
+	"filename": "blueberries-4.png instance 1",
+	"frame": {"x":0,"y":0,"w":95,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":95,"h":75},
+	"sourceSize": {"w":95,"h":75}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "blueberry.png",
+	"format": "RGBA8888",
+	"size": {"w":104,"h":94},
+	"scale": "1"
+}
+}

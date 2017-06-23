@@ -1,0 +1,51 @@
+{"frames": [
+
+{
+	"filename": "blackberries-0.png instance 1",
+	"frame": {"x":0,"y":0,"w":69,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":37},
+	"sourceSize": {"w":69,"h":37}
+}
+,{
+	"filename": "blackberries-1.png instance 1",
+	"frame": {"x":69,"y":0,"w":73,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":73,"h":45},
+	"sourceSize": {"w":73,"h":45}
+}
+,{
+	"filename": "blackberries-2.png instance 1",
+	"frame": {"x":142,"y":0,"w":77,"h":51},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":77,"h":51},
+	"sourceSize": {"w":77,"h":51}
+}
+,{
+	"filename": "blackberries-3.png instance 1",
+	"frame": {"x":219,"y":0,"w":84,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":64},
+	"sourceSize": {"w":84,"h":64}
+}
+,{
+	"filename": "blackberries-4.png instance 1",
+	"frame": {"x":303,"y":0,"w":98,"h":81},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":81},
+	"sourceSize": {"w":98,"h":81}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "blackberries.png",
+	"format": "RGBA8888",
+	"size": {"w":446,"h":79},
+	"scale": "1"
+}
+}

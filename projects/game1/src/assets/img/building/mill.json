@@ -1,0 +1,19 @@
+﻿{"frames": [
+
+{
+	"filename": "Bitmap 1 instance 1",
+	"frame": {"x":0,"y":0,"w":320,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":320,"h":370},
+	"sourceSize": {"w":320,"h":370}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "mill.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}

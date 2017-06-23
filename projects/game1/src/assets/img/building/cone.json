@@ -1,0 +1,19 @@
+﻿{"frames": [
+
+{
+	"filename": "cone-house.png instance 1",
+	"frame": {"x":0,"y":0,"w":255,"h":268},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":255,"h":268},
+	"sourceSize": {"w":255,"h":268}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "16.0.1.119",
+	"image": "cone.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":512},
+	"scale": "1"
+}
+}
