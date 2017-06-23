@@ -174,9 +174,12 @@
       $('.portfolio-modal').modal({
           backdrop: 'static',
           keyboard: false
-      }).hide();
-      // Get's ove the modal, can't scroll with it
-      $('.modal-backdrop').remove();
+      })
+      $('.portfolio-modal').modal('hide');
+      $('.portfolio-modal').on('shown.bs.modal', function() {
+        // Get's ove the modal, can't scroll with it
+        $('.modal-backdrop').remove();
+      });
 
       // Get the HTML DOM element that will contain your map
       // We are using a div with id="map" seen below in the <body>
