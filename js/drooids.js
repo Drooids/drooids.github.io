@@ -98,15 +98,6 @@
         target: '.navbar-fixed-top'
       });
 
-      // Cool contact form
-      drooids.body.on("input propertychange", ".floating-label-form-group", function(e) {
-          $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
-      }).on("focus", ".floating-label-form-group", function() {
-          $(this).addClass("floating-label-form-group-with-focus");
-      }).on("blur", ".floating-label-form-group", function() {
-          $(this).removeClass("floating-label-form-group-with-focus");
-      });
-
       // Closes the Responsive Menu on Menu Item Click
       drooids.navbar.click(function() {
         $('.navbar-toggle:visible').click();
@@ -179,12 +170,20 @@
         }]
       };
 
+      // Modals
+      $('.portfolio-modal').modal({
+          backdrop: 'static',
+          keyboard: false
+      }).hide();
+      // Get's ove the modal, can't scroll with it
+      $('.modal-backdrop').remove();
+
       // Get the HTML DOM element that will contain your map
       // We are using a div with id="map" seen below in the <body>
       var mapElement = document.getElementById('map');
       var map = new google.maps.Map(mapElement, mapOptions);
-      
-      /* 
+
+      /*
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(58.8234151, 5.7239151,201),
         map: map,
