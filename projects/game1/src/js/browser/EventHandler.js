@@ -36,9 +36,9 @@
         document.onkeydown = null;
     }
 
-    var main = function() {
+    (function() {
         g_.game.container.addEventListener("mouseover", disableScroll);
         g_.game.container.addEventListener("mouseout", enableScroll);
-    }();
+    })();
 
 })();

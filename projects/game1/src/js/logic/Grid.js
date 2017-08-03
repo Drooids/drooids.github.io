@@ -1,6 +1,9 @@
 (function() {
     'use strict';
 
+    // Bounds
+    // http://www.html5gamedevs.com/topic/25025-set-world-bounds-for-an-isometric-world/
+
     function Grid() {
     }
 
@@ -197,7 +200,7 @@
 
         for(var i = 0; i < 3 * 98; i += 54) {
             for(var j = 0; j < 3 * 81; j += 40) {
-                game.add.isoSprite(700 + i, 400 + j, 0, 'plant-redberry', 0);
+                game.add.isoSprite(700 + i, 400 + j, 0, 'plant-redberry', 0, isoGroup);
             }
         }
 
@@ -216,8 +219,12 @@
         cow.width *= -1;
         cowf.width *= -1;
 
-        cowf = game.add.isoSprite(1830 - 300, 0, 0, 'animal-cow-brown-fence', 0);
+        cowf = game.add.isoSprite(1830 - 300, 0, 0, 'animal-cow-brown-fence', 0, isoGroup);
+        window.cowf = cowf;
+
         cowf.width *= -1;
+
+        window.cowft = cowf;
 
         window.cowb = game.add.isoSprite(1800 - 300, 40, 0, 'animal-cow-ayrshire-body', 0);
         cowb.width *= -1;
@@ -340,7 +347,7 @@
             }
         }
 
-        game.add.isoSprite(1050, 450, 0, 'building-mill', 0);
+        game.add.isoSprite(1050, 450, 0, 'building-mill', 0, isoGroup);
         game.add.isoSprite(900, 1600, 0, 'building-mill', 0);
         game.add.isoSprite(1500, 1600, 0, 'building-mill', 0);
         game.add.isoSprite(1500, 450, 0, 'building-mill', 0);
@@ -370,10 +377,9 @@
 
         game.debug.cameraInfo(game.camera, 20, 50);
 
-        // isoGroup.forEach(function (tile) {
-            // console.log(tile);
-            // game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
-        // });
+        isoGroup.forEach(function (tile) {
+            game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
+        });
     };
 
     Grid.prototype.onInputDown = function() {

@@ -1,7 +1,13 @@
 var g_ = {
     game: {
         name: 'CountryLife-game',
-        container: document.getElementById('CountryLife-game')
+        container: document.getElementById('CountryLife-game'),
+        detectPlatform: function() {
+            if(DeviceHandler.mbileOrTablet()) {
+                return Phaser.AUTO;
+            }
+            return Phaser.AUTO;
+        }
     },
     screen: {
         width: window.innerWidth * window.devicePixelRatio,
@@ -17,7 +23,7 @@ var g_ = {
 var game = new Phaser.Game(
     g_.screen.width,
     g_.screen.height,
-    Phaser.AUTO,
+    g_.game.detectPlatform(),
     g_.game.name,
     null,
     true,

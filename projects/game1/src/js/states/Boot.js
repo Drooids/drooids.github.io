@@ -20,13 +20,13 @@
             game.scale.pageAlignVertically = true;
         } else {
             game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-            game.scale.minWidth = 480;
-            game.scale.minHeight = 260;
-            game.scale.maxWidth = 640;
-            game.scale.maxHeight = 480;
-            game.scale.forceOrientation(true);
-            game.scale.pageAlignHorizontally = true;
-            game.scale.setScreenSize(true);
+            // game.scale.minWidth = 480;
+            // game.scale.minHeight = 260;
+            // game.scale.maxWidth = 640;
+            // game.scale.maxHeight = 480;
+            // game.scale.forceOrientation(true);
+            // game.scale.pageAlignHorizontally = true;
+            // game.scale.refresh(true);
         }
     };
 
@@ -36,5 +36,4 @@
 
     window['CountryLife'] = window['CountryLife'] || {};
     window['CountryLife'].Boot = Boot;
-    window['CL'] = window['CountryLife'];
 }());
