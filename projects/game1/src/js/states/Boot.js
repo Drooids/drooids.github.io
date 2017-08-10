@@ -25,11 +25,11 @@
             game.scale.maxWidth = 640;
             game.scale.maxHeight = 480;
             // game.scale.forceOrientation(true);
-            game.scale.pageAlignHorizontally = true;
+            // game.scale.pageAlignHorizontally = true;
             game.scale.refresh();
         }
         
-        alert("version: 0.1");
+        alert("version: 0.2");
     };
 
     Boot.prototype.create = function() {
