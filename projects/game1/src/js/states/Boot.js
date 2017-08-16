@@ -59,7 +59,7 @@
             // game.scale.refresh();
         }
         
-        alert("version: 0.4");
+        alert("version: 0.5");
     };
     
     Boot.prototype.setScaling = function(game) {
