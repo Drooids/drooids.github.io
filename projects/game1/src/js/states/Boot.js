@@ -74,7 +74,7 @@
             // game.scale.refresh();
         }
 
-        alert("version: 0.5");
+        alert("version: 0.6");
     };
 
     Boot.prototype.create = function() {
