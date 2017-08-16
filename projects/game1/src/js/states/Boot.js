@@ -16,7 +16,7 @@
             'assets/img/preload/game-name.json');
 
         // configure game
-        if (game.device.desktop) {
+        if (!game.device.desktop) {
             game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             game.scale.pageAlignHorizontally = true;
             game.scale.pageAlignVertically = true;
