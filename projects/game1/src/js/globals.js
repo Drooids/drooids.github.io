@@ -2,7 +2,7 @@ var g_ = {
     game: {
         name: 'CountryLife-game',
         container: document.getElementById('CountryLife-game'),
-        detectPlatform: function() {
+        getRenderer: function() {
             if(DeviceHandler.mbileOrTablet()) {
                 return Phaser.AUTO;
             }
@@ -20,12 +20,12 @@ var g_ = {
         }
     }
 };
-var game = new Phaser.Game(
-    g_.screen.width,
-    g_.screen.height,
-    g_.game.detectPlatform(),
-    g_.game.name,
-    null,
-    true,
-    false
-);
+g_.game.config = {
+    width: g_.screen.width,
+    height: g_.screen.height,
+    renderer: g_.game.getRenderer(),
+    multiTexture: true,
+    parent: g_.game.name,
+    enableDebug: false
+};
+var game = new Phaser.Game(g_.game.config);
