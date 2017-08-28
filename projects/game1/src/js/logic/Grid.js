@@ -368,14 +368,16 @@
     }
 
     Grid.prototype.render = function() {
-        game.debug.text("fps: " + game.time.fps, 20, 20, "#000000");
+        // game.debug.text("fps: " + game.time.fps, 20, 20, "#000000");
 
+        /*
         game.debug.text("cursorPos -> x: " + cursorPos.x.toFixed(2)
             + " y: " + cursorPos.y.toFixed(2)
             + " z: " + cursorPos.z.toFixed(2),
             100, 20, "#000000");
 
         game.debug.cameraInfo(game.camera, 20, 50);
+        */
 
         isoGroup.forEach(function (tile) {
             game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
