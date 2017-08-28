@@ -23,12 +23,7 @@
 
     Boot.prototype.preload = function() {
 
-        // Load animations before game start
-        game.load.json('preload-loading-icon',
-            'assets/img/preload/loading-icon.json');
-
-        game.load.json('preload-game-name',
-            'assets/img/preload/game-name.json');
+        game.clearBeforeRender = false;
 
         // configure game
         if (game.device.desktop) {
@@ -64,17 +59,15 @@
             manager.setGameSize(Constants.CALCULATED_WIDTH, Constants.CALCULATED_HEIGHT);
             manager.setUserScale(1 / scaleFactor, 1 / scaleFactor);
 
-            // game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
-            // game.scale.minWidth = 480;
-            // game.scale.minHeight = 260;
-            // game.scale.maxWidth = 640;
-            // game.scale.maxHeight = 480;
-            // game.scale.forceOrientation(true);
-            // game.scale.pageAlignHorizontally = true;
-            // game.scale.refresh();
+             // Load animations before game start
+            game.load.json('preload-loading-icon',
+                'assets/img/preload/loading-icon.json');
+
+            game.load.json('preload-game-name',
+                'assets/img/preload/game-name.json');
         }
 
-        alert("version: 0.0.3");
+        alert("version: 0.0.4");
     };
 
     Boot.prototype.create = function() {
