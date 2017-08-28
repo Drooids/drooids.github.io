@@ -380,7 +380,7 @@
         */
 
         isoGroup.forEach(function (tile) {
-            game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
+            // game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
         });
     };
 
