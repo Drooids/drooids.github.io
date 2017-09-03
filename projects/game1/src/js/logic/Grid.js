@@ -118,6 +118,7 @@
         // cursorPos.z = 100;
 
         // Loop through all tiles and test to see if the 3D position from above intersects with the automatically generated IsoSprite tile bounds.
+        /*
         isoGroup.forEach(function (tile) {
             var inBounds = tile.isoBounds.contains(cursorPos.x, cursorPos.y, cursorPos.z);
             // If it does, do a little animation and tint change.
@@ -133,6 +134,7 @@
                 game.add.tween(tile).to({ isoZ: 0 }, 200, Phaser.Easing.Quadratic.InOut, true);
             }
         });
+        */
     };
 
     Grid.prototype.spawnTiles = function () {
@@ -325,7 +327,7 @@
 
         for(var y = 0; y < 1500; y+= 150) {
             for(var x = 0; x < 300; x+= 150) {
-
+            /*
                 cowf = game.add.isoSprite(1830 - 1500 + x, 0 + y, 0, 'animal-cow-brown-fence', 0);
                 cowf.width *= -1;
 
@@ -343,7 +345,7 @@
 
                 cowt.animations.add('run');
                 cowt.animations.play('run', 20, true);
-
+            */
             }
         }
 
