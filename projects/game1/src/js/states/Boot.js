@@ -67,7 +67,7 @@
                 'assets/img/preload/game-name.json');
         }
 
-        alert("version: 0.0.4");
+        alert("version: 0.0.5");
     };
 
     Boot.prototype.create = function() {
