@@ -67,7 +67,7 @@
             manager.setUserScale(1 / scaleFactor, 1 / scaleFactor);
         }
 
-        alert("version: 0.0.6");
+        alert("version: 0.0.7");
     };
 
     Boot.prototype.create = function() {
