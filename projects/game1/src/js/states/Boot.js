@@ -23,6 +23,8 @@
 
     Boot.prototype.preload = function() {
         
+        game.forceSingleUpdate = true;
+        
         // Load animations before game start
         game.load.json('preload-loading-icon',
             'assets/img/preload/loading-icon.json');
@@ -67,7 +69,7 @@
             manager.setUserScale(1 / scaleFactor, 1 / scaleFactor);
         }
 
-        alert("version: 0.0.7");
+        alert("version: 0.0.8");
     };
 
     Boot.prototype.create = function() {
