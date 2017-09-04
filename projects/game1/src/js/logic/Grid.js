@@ -92,8 +92,10 @@
 
         // Create a group for our tiles.
         isoGroup = game.add.group();
+        
+        isoGroup.enableBody = false;
 
-        CountryLife.EntityManager.entities['isoGroup'] = isoGroup;
+        // CountryLife.EntityManager.entities['isoGroup'] = isoGroup;
 
         // Let's make a load of tiles on a grid.
         this.spawnTiles();
