@@ -10,8 +10,6 @@
     var isoGroup, cursorPos;
 
     Grid.prototype.preload = function() {
-        game.time.advancedTiming = true;
-
         game.load.atlas('cow_2', 'assets/img/cow/2/2.png', null,
             game.cache.getJSON('cow_2'));
 
@@ -81,6 +79,12 @@
     };
 
     Grid.prototype.create = function() {
+        game.renderer.setTexturePriority([
+            'cow_2', 'animal-sheep-white-head', 'animal-sheep-white-body', 'animal-sheep-white-legs',
+            'tree-apple-001', 'garden-fens-white', 'plant-blueberry', 'plant-redberry', 'plant-blackberry',
+            'tree-apple-002', 'building-mill'
+        ]);
+
         // Add and enable the plug-in.
         game.plugins.add(new Phaser.Plugin.Isometric(game));
 
@@ -92,10 +96,10 @@
 
         // Create a group for our tiles.
         isoGroup = game.add.group();
-        
+
         isoGroup.enableBody = false;
 
-        // CountryLife.EntityManager.entities['isoGroup'] = isoGroup;
+        CountryLife.EntityManager.entities['isoGroup'] = isoGroup;
 
         // Let's make a load of tiles on a grid.
         this.spawnTiles();
@@ -109,6 +113,16 @@
     };
 
     Grid.prototype.update = function() {
+
+        window.rS( 'FPS' ).frame();
+        window.rS( 'update' ).start();
+
+        //trigger the frame for anyone watching
+        window.rS().update();
+
+        window.rS( 'update' ).end();
+
+
     	// Update the cursor position.
         // It's important to understand that screen-to-isometric
         // projection means you have to specify a z position manually,
@@ -372,6 +386,12 @@
     }
 
     Grid.prototype.render = function() {
+
+        window.rS( 'render' ).start();
+
+        window.rS( 'render' ).end();
+        window.rS().update();
+
         // game.debug.text("fps: " + game.time.fps, 20, 20, "#000000");
 
         /*
@@ -383,9 +403,9 @@
         game.debug.cameraInfo(game.camera, 20, 50);
         */
 
-        isoGroup.forEach(function (tile) {
+        // isoGroup.forEach(function (tile) {
             // game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
-        });
+        // });
     };
 
     Grid.prototype.onInputDown = function() {

@@ -1,10 +1,11 @@
 (function() {
     'use strict';
 
+    var Constants = {}; // todo: Edit later on...
+    window.rS;
+
     function Boot() {
     }
-
-    var Constants = {}; // todo: Edit later on...
 
     Boot.prototype.setScaling = function(game) {
         //Check if the device is in portrait mode, and if so, override the width with the innerHeight.
@@ -22,9 +23,7 @@
     };
 
     Boot.prototype.preload = function() {
-        
-        game.forceSingleUpdate = true;
-        
+
         // Load animations before game start
         game.load.json('preload-loading-icon',
             'assets/img/preload/loading-icon.json');
@@ -32,6 +31,7 @@
         game.load.json('preload-game-name',
             'assets/img/preload/game-name.json');
 
+        game.forceSingleUpdate = true;
         game.clearBeforeRender = false;
 
         // configure game
@@ -68,13 +68,19 @@
             manager.setGameSize(Constants.CALCULATED_WIDTH, Constants.CALCULATED_HEIGHT);
             manager.setUserScale(1 / scaleFactor, 1 / scaleFactor);
         }
-
-        alert("version: 0.0.8");
     };
 
     Boot.prototype.create = function() {
         game.state.start('ladingScreen');
-    }
+
+        window.rS = new rStats( {
+            values: {
+                fps: { caption: 'Framerate (FPS)' },
+                update: { caption: 'Total update time (ms)' },
+                render: { caption: 'Total render time (ms)' }
+            }
+        } );
+    };
 
     window['CountryLife'] = window['CountryLife'] || {};
     window['CountryLife'].Boot = Boot;

@@ -5,7 +5,6 @@
     }
 
     Preloader.prototype.preload = function () {
-
         // Game loading animation
         var gameName = game.add.sprite(game.width / 3, game.height / 3,
             'preload-game-name');
@@ -81,8 +80,6 @@
 
         // Gui
         game.load.json('guiRightPanel', 'assets/img/gui/003.json');
-
-        game.time.advancedTiming = true;
     };
 
     Preloader.prototype.create = function () {

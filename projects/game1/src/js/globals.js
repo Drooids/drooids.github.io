@@ -24,8 +24,8 @@ g_.game.config = {
     width: g_.screen.width,
     height: g_.screen.height,
     renderer: g_.game.getRenderer(),
+    antialias: true,
     multiTexture: true,
-    parent: g_.game.name,
     enableDebug: false
 };
 var game = new Phaser.Game(g_.game.config);
