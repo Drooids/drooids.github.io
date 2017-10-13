@@ -5,6 +5,7 @@
     }
 
     ScreenManager.prototype.create = function() {
+
         CountryLife.EntityManager.entities['background'] =
             game.add.sprite(0, 0, 'background');
 
@@ -26,11 +27,11 @@
 
         var wBound =
             game.cache.getImage("background").width +
-            game.cache.getImage("backgroundTopRight").width;
+            game.cache.getImage("backgroundTopRight").width; // = 4932
 
         var hBound =
             game.cache.getImage("background").height +
-            game.cache.getImage("backgroundBottomLeft").height;
+            game.cache.getImage("backgroundBottomLeft").height; // = 6064
 
         game.world.setBounds(
             0, 0,

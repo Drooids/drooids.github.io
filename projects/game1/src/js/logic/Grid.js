@@ -65,6 +65,7 @@
             'assets/img/animal/cow/cow-ayrshire-tail.png', null,
             game.cache.getJSON('animal-cow-ayrshire-tail'));
 
+        /*
         game.load.atlas('animal-sheep-white-head',
             'assets/img/animal/sheep/sheep-white-head.png', null,
             game.cache.getJSON('animal-sheep-white-head'));
@@ -76,14 +77,18 @@
         game.load.atlas('animal-sheep-white-legs',
             'assets/img/animal/sheep/sheep-white-legs.png', null,
             game.cache.getJSON('animal-sheep-white-legs'));
+        */
     };
 
     Grid.prototype.create = function() {
         game.renderer.setTexturePriority([
-            'cow_2', 'animal-sheep-white-head', 'animal-sheep-white-body', 'animal-sheep-white-legs',
+            'animal-cow-ayrshire-body', 'animal-cow-ayrshire-head', 'animal-cow-ayrshire-tail',
+            'animal-sheep-white-head', 'animal-sheep-white-body', 'animal-sheep-white-legs',
             'tree-apple-001', 'garden-fens-white', 'plant-blueberry', 'plant-redberry', 'plant-blackberry',
             'tree-apple-002', 'building-mill'
         ]);
+
+        game.plugins.add(Phaser.Plugin.SaveCPU);
 
         // Add and enable the plug-in.
         game.plugins.add(new Phaser.Plugin.Isometric(game));
@@ -106,10 +111,6 @@
 
         // Provide a 3D position for the cursor
         cursorPos = new Phaser.Plugin.Isometric.Point3();
-
-        // var cow = game.add.sprite(100, 100, 'cow_2');
-        // cow.animations.add('run');
-        // cow.animations.play('run', 20, true);
     };
 
     Grid.prototype.update = function() {
@@ -185,39 +186,44 @@
         game.add.isoSprite(800, 1800, 0, 'building-gingerbread', 0, isoGroup);
         game.add.isoSprite(600, 0, 0, 'building-eco', 0, isoGroup);
 
-
-        for(var i = 0; i < 2080; i += 80) {
-            game.add.isoSprite(i, 2000, 0, 'tree-apple-002', 0, isoGroup);
+        for(var i = 0; i < 2080; i += 120) {
             game.add.isoSprite(i + 150, 2150, 0, 'garden-fens-white', 0, isoGroup);
             game.add.isoSprite(i + 150  - 10, 2150, 0, 'garden-fens-white', 2, isoGroup);
         }
 
+        for(var i = 0; i < 2080; i += 80) {
+            game.add.isoSprite(i, 2000, 0, 'tree-apple-002', 0, isoGroup);
+        }
+
         for(var i = 2080; i > 0; i -= 80) {
-            game.add.isoSprite(2000, i, 0, 'tree-apple-002', 0, isoGroup);
             game.add.isoSprite(2200, i, 0, 'garden-fens-white', 1, isoGroup);
             game.add.isoSprite(2220, i + 25, 0, 'garden-fens-white', 2, isoGroup);
         }
 
-        for(var i = 0; i < 3 * 98; i += 54) {
-            for(var j = 0; j < 10 * 81; j += 40) {
+        for(var i = 2080; i > 0; i -= 120) {
+            game.add.isoSprite(2000, i, 0, 'tree-apple-002', 0, isoGroup);
+        }
+
+        for(var i = 0; i < 3 * 98; i += 64) {
+            for(var j = 0; j < 10 * 81; j += 64) {
                 game.add.isoSprite(1500 + i, 800 + j, 0, 'plant-redberry', 0, isoGroup);
             }
         }
 
-        for(var i = 0; i < 3 * 98; i += 54) {
-            for(var j = 0; j < 10 * 81; j += 40) {
+        for(var i = 0; i < 3 * 98; i += 64) {
+            for(var j = 0; j < 10 * 81; j += 64) {
                 game.add.isoSprite(1100 + i, 800 + j, 0, 'plant-blackberry', 0, isoGroup);
             }
         }
 
-        for(var i = 0; i < 3 * 98; i += 54) {
-            for(var j = 0; j < 10 * 81; j += 40) {
+        for(var i = 0; i < 3 * 98; i += 64) {
+            for(var j = 0; j < 10 * 81; j += 64) {
                 game.add.isoSprite(700 + i, 800 + j, 0, 'plant-blueberry', 0, isoGroup);
             }
         }
 
-        for(var i = 0; i < 3 * 98; i += 54) {
-            for(var j = 0; j < 3 * 81; j += 40) {
+        for(var i = 0; i < 3 * 98; i += 64) {
+            for(var j = 0; j < 3 * 81; j += 64) {
                 game.add.isoSprite(700 + i, 400 + j, 0, 'plant-redberry', 0, isoGroup);
             }
         }
@@ -231,8 +237,12 @@
         var cowf = game.add.isoSprite(1830, 0, 0, 'animal-cow-brown-fence', 0);
         var cow = game.add.isoSprite(1800, 40, 0, 'animal-cow-brown', 0);
 
-        cow.animations.add('run');
-        cow.animations.play('run', 20, true);
+        if (game.device.desktop) {
+            if(g_.game.animation.enabled) {
+                cow.animations.add('run');
+                cow.animations.play('run', 20, true);
+            }
+        }
 
         cow.width *= -1;
         cowf.width *= -1;
@@ -253,11 +263,15 @@
         window.cowt = game.add.isoSprite(1830 - 300, 30, 0, 'animal-cow-ayrshire-tail', 0);
         cowt.width *= -1;
 
-        cowh.animations.add('run');
-        cowh.animations.play('run', 20, true);
+        if (game.device.desktop) {
+            if(g_.game.animation.enabled) {
+                cowh.animations.add('run');
+                cowh.animations.play('run', 20, true);
 
-        cowt.animations.add('run');
-        cowt.animations.play('run', 20, true);
+                cowt.animations.add('run');
+                cowt.animations.play('run', 20, true);
+            }
+        }
 
         cowf = game.add.isoSprite(1830 - 150, 0, 0, 'animal-cow-brown-fence', 0);
         cowf.width *= -1;
@@ -271,12 +285,17 @@
         window.cowt = game.add.isoSprite(1830 - 150, 30, 0, 'animal-cow-ayrshire-tail', 0);
         cowt.width *= -1;
 
-        cowh.animations.add('run');
-        cowh.animations.play('run', 20, true);
+        if (game.device.desktop) {
+            if(g_.game.animation.enabled) {
+                cowh.animations.add('run');
+                cowh.animations.play('run', 20, true);
 
-        cowt.animations.add('run');
-        cowt.animations.play('run', 20, true);
+                cowt.animations.add('run');
+                cowt.animations.play('run', 20, true);
+            }
+        }
 
+        /*
         vx = -100;
         vy = 640;
         var sl = game.add.isoSprite(1190 - vx, 640 - vy, 0, 'animal-sheep-white-legs', 0);
@@ -287,11 +306,13 @@
         sb.width *= -1;
         sh.width *= -1;
 
+        if(g_.game.animation.enabled) {
         sh.animations.add('run');
         sh.animations.play('run', 20, true);
 
         sb.animations.add('run');
         sb.animations.play('run', 20, true);
+        }
 
         var vx = 100;
         var vy = 640;
@@ -303,11 +324,13 @@
         sb.width *= -1;
         sh.width *= -1;
 
+        if(g_.game.animation.enabled) {
         sh.animations.add('run');
         sh.animations.play('run', 20, true);
 
         sb.animations.add('run');
         sb.animations.play('run', 20, true);
+        }
 
         var vx = -100;
         var vy = 840;
@@ -319,11 +342,15 @@
         sb.width *= -1;
         sh.width *= -1;
 
-        sh.animations.add('run');
-        sh.animations.play('run', 20, true);
+        if (game.device.desktop) {
+            if(g_.game.animation.enabled) {
+            sh.animations.add('run');
+            sh.animations.play('run', 20, true);
 
-        sb.animations.add('run');
-        sb.animations.play('run', 20, true);
+            sb.animations.add('run');
+            sb.animations.play('run', 20, true);
+            }
+        }
 
         var vx = 100;
         var vy = 940;
@@ -335,35 +362,47 @@
         sb.width *= -1;
         sh.width *= -1;
 
-        sh.animations.add('run');
-        sh.animations.play('run', 20, true);
 
-        sb.animations.add('run');
-        sb.animations.play('run', 20, true);
+        if (game.device.desktop) {
+            if(g_.game.animation.enabled) {
+                sh.animations.add('run');
+                sh.animations.play('run', 20, true);
 
-        for(var y = 0; y < 1500; y+= 150) {
-            for(var x = 0; x < 300; x+= 150) {
-            /*
-                cowf = game.add.isoSprite(1830 - 1500 + x, 0 + y, 0, 'animal-cow-brown-fence', 0);
-                cowf.width *= -1;
-
-                window.cowb = game.add.isoSprite(1800 - 1500 + x, 40 +y, 0, 'animal-cow-ayrshire-body', 0);
-                cowb.width *= -1;
-
-                window.cowh = game.add.isoSprite(1790 - 1500 + x, 80 + y, 0, 'animal-cow-ayrshire-head', 0);
-                cowh.width *= -1;
-
-                window.cowt = game.add.isoSprite(1830 - 1500 + x, 30 + y, 0, 'animal-cow-ayrshire-tail', 0);
-                cowt.width *= -1;
-
-                cowh.animations.add('run');
-                cowh.animations.play('run', 20, true);
-
-                cowt.animations.add('run');
-                cowt.animations.play('run', 20, true);
-            */
+                sb.animations.add('run');
+                sb.animations.play('run', 20, true);
             }
         }
+        */
+
+        // if (game.device.desktop) {
+            for(var y = 0; y < 800; y+= 350) {
+                for(var x = 0; x < 300; x+= 150) {
+
+                    cowf = game.add.isoSprite(1830 - 1500 + x, 0 + y, 0, 'animal-cow-brown-fence', 0);
+                    cowf.width *= -1;
+
+                    window.cowb = game.add.isoSprite(1800 - 1500 + x, 40 +y, 0, 'animal-cow-ayrshire-body', 0);
+                    cowb.width *= -1;
+
+                    window.cowh = game.add.isoSprite(1790 - 1500 + x, 80 + y, 0, 'animal-cow-ayrshire-head', 0);
+                    cowh.width *= -1;
+
+                    window.cowt = game.add.isoSprite(1830 - 1500 + x, 30 + y, 0, 'animal-cow-ayrshire-tail', 0);
+                    cowt.width *= -1;
+
+                    if (game.device.desktop) {
+                        if(g_.game.animation.enabled) {
+                            cowh.animations.add('run');
+                            cowh.animations.play('run', 20, true);
+
+                            cowt.animations.add('run');
+                            cowt.animations.play('run', 20, true);
+                        }
+                    }
+
+                }
+            }
+        // }
 
         game.add.isoSprite(1050, 450, 0, 'building-mill', 0, isoGroup);
         game.add.isoSprite(900, 1600, 0, 'building-mill', 0);
@@ -402,10 +441,6 @@
 
         game.debug.cameraInfo(game.camera, 20, 50);
         */
-
-        // isoGroup.forEach(function (tile) {
-            // game.debug.body(tile, 'rgba(0, 0, 0, 0.6)', false);
-        // });
     };
 
     Grid.prototype.onInputDown = function() {

@@ -7,6 +7,9 @@ var g_ = {
                 return Phaser.AUTO;
             }
             return Phaser.AUTO;
+        },
+        animation: {
+            enabled: true
         }
     },
     screen: {

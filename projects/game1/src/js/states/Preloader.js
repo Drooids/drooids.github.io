@@ -6,11 +6,17 @@
 
     Preloader.prototype.preload = function () {
         // Game loading animation
-        var gameName = game.add.sprite(game.width / 3, game.height / 3,
-            'preload-game-name');
+        var gameName = game.add.sprite(0, 0, 'preload-game-name');
+        var loadingIco = game.add.sprite(0, 0, 'preload-loading-icon');
 
-        var loadingIco = game.add.sprite(gameName.x + (gameName.width / 2) - 15,
-            gameName.y + gameName.height, 'preload-loading-icon');
+        gameName.scale.setTo(0.5, 0.5);
+        loadingIco.scale.setTo(0.5, 0.5);
+
+        gameName.x = game.width / 3;
+        gameName.y = game.height / 3;
+
+        loadingIco.x = gameName.x + (gameName.width / 2) - 15;
+        loadingIco.y = gameName.y + gameName.height;
 
         loadingIco.animations.add('run');
         loadingIco.animations.play('run', 20, true);
@@ -20,6 +26,7 @@
     };
 
     Preloader.prototype.preloadResources = function () {
+
         // Background
         game.load.image('background', 'assets/img/background/image_511-min.png');
         game.load.image('backgroundTopRight', 'assets/img/background/image_510-min.png');

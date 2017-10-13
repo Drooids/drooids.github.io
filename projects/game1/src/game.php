@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CountryLife</title>
 <!-- build:css main.min.css -->
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
 <!-- /build -->
 </head>
 
@@ -18,6 +18,7 @@
 
 <!-- build:js phaser.min.js-->
 <script src="js/lib/phaser.js"></script>
+<script src="js/lib/saveCPU.js"></script>
 <script src="js/lib/phaser-plugin-isometric.min.js"></script>
 <script src="js/lib/rStats.js"></script>
 <!-- /build -->
