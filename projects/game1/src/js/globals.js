@@ -4,9 +4,9 @@ var g_ = {
         container: document.getElementById('CountryLife-game'),
         getRenderer: function() {
             if(DeviceHandler.mbileOrTablet()) {
-                return Phaser.AUTO;
+                return Phaser.CANVAS;
             }
-            return Phaser.AUTO;
+            return Phaser.CANVAS;
         },
         animation: {
             enabled: true
