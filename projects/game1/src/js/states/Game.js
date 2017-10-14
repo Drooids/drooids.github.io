@@ -7,12 +7,9 @@
     Game.prototype.preload = function() {
         CL.Grid.preload();
         CL.GUIManager.preload();
-            
+        
         // todo: remove me later on...
         if(game.renderer instanceof PIXI.CanvasRenderer) { alert('canvas'); } else { alert('webgl'); }
-
-        if(game.renderer.type == 1) { alert('canvas'); }
-        if(game.renderer.type == 2) { alert('webgl'); }
     };
 
     Game.prototype.create = function() {
