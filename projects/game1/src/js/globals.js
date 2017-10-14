@@ -6,7 +6,7 @@ var g_ = {
             if(DeviceHandler.mbileOrTablet()) {
                 return Phaser.CANVAS;
             }
-            return Phaser.CANVAS;
+            return Phaser.AUTO;
         },
         animation: {
             enabled: true
